@@ -1,0 +1,60 @@
+.skills-container {
+    overflow: hidden;
+    width: 100%;
+    background: linear-gradient(90deg, #000000, #eaeaea);
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  .skills-track {
+    display: flex;
+    gap: 30px;
+    animation: scroll 20s linear infinite;
+    will-change: transform;
+  }
+  
+  .skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    flex-shrink: 0;
+  }
+  
+  .skill-card:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .html { color: #E34F26; }
+  .css { color: #1572B6; }
+  .js { color: #F7DF1E; }
+  .ts { color: #3178C6; }
+  .react { color: #61DAFB; }
+  .redux { color: #764ABC; }
+  .axios { color: #A166FF; }
+  .tailwind { color: #38B2AC; }
+  .git { color: #F05032; }
+  .vite { color: #9567e0; }
+  .postman { color: #FF6C37; }
+  
+  /* Анимация бесшовного движения */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
