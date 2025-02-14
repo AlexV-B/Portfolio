@@ -8,13 +8,18 @@ import {
   
   const Skills = () => {
     return (
+      <section id="skills" className="skills-section">
+
       <div className="skills-container">
         <div className="skills-track">
           <SkillCards />
           {/* Дублируем для бесшовного эффекта */}
           <SkillCards />
+          <SkillCards />
         </div>
       </div>
+      </section>
+
     );
   };
   

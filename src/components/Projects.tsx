@@ -7,7 +7,7 @@ const projects = [
     id: 1,
     title: "Мой первый проект",
     description: "Простой сайт с адаптивным дизайном.",
-    link: "https://yourusername.github.io/project1/",
+    link: "https://alexv-b.github.io/my-first-ts/",
   },
   {
     id: 2,

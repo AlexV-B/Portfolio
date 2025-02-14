@@ -9,6 +9,8 @@
   min-height: 90vh;
   overflow: hidden;
   position: relative;
+  cursor: default;
+
   background-image: repeating-linear-gradient(
       0deg,
       rgba(0, 0, 0, 0) 0px,
@@ -26,6 +28,7 @@
     linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
   background-size: 30px 30px;
   background-position: center;
+  z-index: 1;
 }
 
 .title {
@@ -86,8 +89,6 @@
 
 }
 
-
-
 .SecondPhoto {
   display: inline-block;
   position: relative;
@@ -134,7 +135,8 @@
     font-size: 80px;
   }
 
-  .FirstPhoto {
+  .FirstPhoto
+  .SecondPhoto {
     width: 1.5em;
     height: 1.5em;
   }
@@ -144,9 +146,39 @@
   .name {
     font-size: 80px;
   }
+}
 
+@media (max-width: 360px) {
+  /* Для самых маленьких экранов, например, iPhone SE */
+  .name {
+    font-size: 40px; /* Сильно уменьшаем текст */
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  .FirstPhoto,
   .SecondPhoto {
-    width: 1.5em;
-    height: 1.5em;
+    width: 0.8em; /* Еще меньше размеры */
+    height: 0.8em;
+  }
+
+  .FirstPhoto img,
+  .SecondPhoto img {
+    width: 0.8em;
+    height: 0.8em;
+  }
+
+  .FirstPhoto::before,
+  .SecondPhoto::before {
+    border: 8px solid #007bff; /* Снова уменьшаем толщину */
   }
 }
+
+@media (max-width: 390px) {
+
+ 
+
+}
+

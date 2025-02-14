@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="hero-section" className={styles.hero}>
+    <section ref={sectionRef} id="home" className={styles.hero}>
             <h1 className={styles.title}>Varnavin-Braun Alexander</h1>
       <div
         className={styles.iam}

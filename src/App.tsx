@@ -6,19 +6,22 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
+import FlyingDrops from './components/FlyingDrops';
+import BurgerMenu from './components/BurgerMenu';
+import { BrowserRouter } from 'react-router-dom';
 
 
 function App() {
   return (
-
-    <div>
-      {/* <Header /> */}
+    <BrowserRouter>
+      <BurgerMenu />
       <Hero />
+      <FlyingDrops />
       <Skills />
       <About />
       <Projects />
       <Contact /> 
-    </div>
+    </BrowserRouter>
   )
 }
 

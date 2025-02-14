@@ -1,0 +1,148 @@
+.bm-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+.bm-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.bm-menu {
+  width: 100vw;
+  transition: transform 0.8s ease-in-out;
+  pointer-events: all;
+
+}
+
+
+
+.bm-icon {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.bm-icon span {
+  display: block;
+  width: 45px;
+  height: 3px;
+  margin: 5px;
+  background-color: #bb8989;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  border-radius: 3px;
+  cursor: pointer;
+
+}
+
+.bm-icon.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.bm-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.bm-icon.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+
+.bm-item {
+  font-size: 6rem;
+  text-decoration: none;
+  width: auto;
+  max-width: 100%;
+  display: flex;
+  font-weight: 700;
+  flex-direction: column;
+  outline: none;
+  z-index: 500;
+  margin: 15px;
+  white-space: nowrap; /* Чтобы текст не переносился */
+overflow: visible;
+box-sizing: border-box;
+pointer-events: all;
+
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  top: 30px;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(-420%);
+  transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  /* Увеличиваем длительность анимации с пружинным эффектом */
+  pointer-events: all;
+  opacity: 1;
+}
+
+.bm-menu-wrap.open {
+  transform: translateX(-420%);
+  pointer-events: all;
+}
+
+.bm-item-list {
+  overflow-y: hidden;
+  /* Отключает прокрутку внутри меню */
+  pointer-events: auto;
+  /* Оставляет возможность кликать внутри меню */
+  position: relative;
+  z-index: 5000;
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 500px;
+}
+
+
+.bm-item-list.animate .bm-item:nth-child(1) {
+  transition-delay: 0.1s;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.bm-item-list.animate .bm-item:nth-child(2) {
+  transition-delay: 0.3s;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.bm-item-list.animate .bm-item:nth-child(3) {
+  transition-delay: 0.5s;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.bm-item-list.animate .bm-item:nth-child(4) {
+  transition-delay: 0.7s;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.bm-item-list.animate .bm-item:nth-child(5) {
+  transition-delay: 0.9s;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Эффект исчезновения */
+.bm-item-list:not(.animate) .bm-item {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
