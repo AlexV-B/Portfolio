@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  align-items: center;
   flex-direction: column;
   padding: 50px;
   background-color: #000000;
@@ -11,27 +10,23 @@
   position: relative;
   cursor: default;
 
-  background-image: repeating-linear-gradient(
-      0deg,
+  background-image: repeating-linear-gradient(0deg,
       rgba(0, 0, 0, 0) 0px,
       rgba(0, 0, 0, 0) 15px,
       rgba(0, 0, 255, 0.1) 15px,
-      rgba(0, 0, 255, 0.1) 20px
-    ),
-    repeating-linear-gradient(
-      90deg,
+      rgba(0, 0, 255, 0.1) 20px),
+    repeating-linear-gradient(90deg,
       rgba(0, 0, 0, 0) 0px,
       rgba(0, 0, 0, 0) 15px,
       rgba(0, 0, 255, 0.1) 15px,
-      rgba(0, 0, 255, 0.1) 20px
-    ),
+      rgba(0, 0, 255, 0.1) 20px),
     linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
   background-size: 30px 30px;
   background-position: center;
   z-index: 1;
 }
 
-.title {
+.name {
   display: flex;
   justify-content: center;
   font-size: 20px;
@@ -41,7 +36,7 @@
   position: relative;
 }
 
-.name {
+.title {
   color: #007bff;
   font-size: 130px;
   margin: 0;
@@ -52,40 +47,56 @@
   display: inline-block;
   position: relative;
   margin: 8px;
-  width: 0.6em; /* Размер круга, приближенный к букве "о" */
-  height: 0.6em; /* Высота равна шрифту */
-  border-radius: 50%; /* Круглая форма */
-  background-color: #007bff; /* Цвет круга такой же, как у текста */
-  overflow: visible; 
-  vertical-align: middle; /* Выравнивание с текстом */
+  width: 0.6em;
+  /* Размер круга, приближенный к букве "о" */
+  height: 0.6em;
+  /* Высота равна шрифту */
+  border-radius: 50%;
+  /* Круглая форма */
+  background-color: #007bff;
+  /* Цвет круга такой же, как у текста */
+  overflow: visible;
+  vertical-align: middle;
+  /* Выравнивание с текстом */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  
+
 }
 
 .FirstPhoto img {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%) translateY(-23%); /* Сдвигаем вверх на 30% */
-  width: 70px; /* Увеличиваем фотографию для выхода за пределы */
+  transform: translateX(-50%) translateY(-23%);
+  /* Сдвигаем вверх на 30% */
+  width: 70px;
+  /* Увеличиваем фотографию для выхода за пределы */
   height: 90px;
-  object-fit: cover; /* Сохраняем пропорции фотографии */
-  transition: transform 0.3s ease; /* Анимация на hover */
-  border-radius: 50%; /* Круглая форма */
+  object-fit: cover;
+  /* Сохраняем пропорции фотографии */
+  transition: transform 0.3s ease;
+  /* Анимация на hover */
+  border-radius: 50%;
+  /* Круглая форма */
 }
 
 .FirstPhoto:hover img {
-  transform: translateX(-50%) translateY(-30%) scale(1.1) rotate(4deg); /* Еще больше выдвигаем вверх */
+  transform: translateX(-50%) translateY(-30%) scale(1.1) rotate(4deg);
+  /* Еще больше выдвигаем вверх */
 }
 
 .FirstPhoto::before {
   content: "";
-  clip-path: circle(80% at 40% 100%); /* Маска для нижней части */
+  clip-path: circle(80% at 40% 100%);
+  /* Маска для нижней части */
   position: absolute;
   inset: 0;
-  border: 13px solid #007bff; /* Цвет обводки совпадает с текстом */
-  border-radius: 50%; /* Соответствие форме круга */
-  z-index: 2; /* Поверх изображения */
-  background-color: transparent; /* Цвет фона внутри буквы */
+  border: 13px solid #007bff;
+  /* Цвет обводки совпадает с текстом */
+  border-radius: 50%;
+  /* Соответствие форме круга */
+  z-index: 2;
+  /* Поверх изображения */
+  background-color: transparent;
+  /* Цвет фона внутри буквы */
 
 }
 
@@ -93,65 +104,150 @@
   display: inline-block;
   position: relative;
   margin: 8px;
-  width: 0.6em; /* Размер круга, приближенный к букве "о" */
-  height: 0.6em; /* Высота равна шрифту */
-  border-radius: 50%; /* Круглая форма */
-  background-color: #007bff; /* Цвет круга такой же, как у текста */
-  overflow: visible; 
-  vertical-align: middle; /* Выравнивание с текстом */
+  width: 0.6em;
+  /* Размер круга, приближенный к букве "о" */
+  height: 0.6em;
+  /* Высота равна шрифту */
+  border-radius: 50%;
+  /* Круглая форма */
+  background-color: #007bff;
+  /* Цвет круга такой же, как у текста */
+  overflow: visible;
+  vertical-align: middle;
+  /* Выравнивание с текстом */
   /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */
-  
+
 }
 
 .SecondPhoto img {
   position: absolute;
   left: 50%;
-  transform: translateX(-46%) translateY(-22%); /* Сдвигаем вверх на 30% */
-  width: 58px; /* Увеличиваем фотографию для выхода за пределы */
+  transform: translateX(-46%) translateY(-22%);
+  /* Сдвигаем вверх на 30% */
+  width: 58px;
+  /* Увеличиваем фотографию для выхода за пределы */
   height: 90px;
-  object-fit: cover; /* Сохраняем пропорции фотографии */
-  transition: transform 0.3s ease; /* Анимация на hover */
-  border-radius: 40%; /* Круглая форма */
+  object-fit: cover;
+  /* Сохраняем пропорции фотографии */
+  transition: transform 0.3s ease;
+  /* Анимация на hover */
+  border-radius: 40%;
+  /* Круглая форма */
 }
 
 .SecondPhoto:hover img {
-  transform: translateX(-40%) translateY(-30%) scale(1.1) rotate(10deg); /* Еще больше выдвигаем вверх */
+  transform: translateX(-40%) translateY(-30%) scale(1.1) rotate(10deg);
+  /* Еще больше выдвигаем вверх */
 }
 
 .SecondPhoto::before {
   content: "";
-  clip-path: circle(75% at 37% 100%); /* Маска для нижней части */
+  clip-path: circle(75% at 37% 100%);
+  /* Маска для нижней части */
   position: absolute;
   inset: 0;
-  border: 13px solid #007bff; /* Цвет обводки совпадает с текстом */
-  border-radius: 50%; /* Соответствие форме круга */
-  z-index: 2; /* Поверх изображения */
-  background-color: transparent; /* Цвет фона внутри буквы */
+  border: 13px solid #007bff;
+  /* Цвет обводки совпадает с текстом */
+  border-radius: 50%;
+  /* Соответствие форме круга */
+  z-index: 2;
+  /* Поверх изображения */
+  background-color: transparent;
+  /* Цвет фона внутри буквы */
 
 }
 
-@media (max-width: 768px) {
-  .name {
-    font-size: 80px;
+/* === Планшеты (1024px) === */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 100px;
   }
 
-  .FirstPhoto
+  .name {
+    font-size: 18px;
+  }
+}
+
+/* === Маленькие планшеты и крупные телефоны (iPhone 14 Pro Max, XR, 11) === */
+@media (max-width: 834px) {
+  .title {
+    font-size: 85px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 40px;
+    min-height: 75vh;
+  }
+}
+
+/* === iPhone XR, 11, 14 Pro Max (414px — 430px) === */
+@media (max-width: 430px) {
+
+  .hero {
+    height: 100vh;
+    width: 80vw;
+  }
+
+  .title {
+    font-size: 65px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .FirstPhoto,
   .SecondPhoto {
-    width: 1.5em;
-    height: 1.5em;
+    width: 0.9em;
+    height: 0.9em;
+  }
+
+  .FirstPhoto img,
+  .SecondPhoto img {
+    width: 50px;
+    height: 70px;
   }
 }
 
-@media (max-width: 768px) {
+/* === iPhone 12/13/14/15 (390px) === */
+@media (max-width: 390px) {
+  .title {
+    font-size: 60px;
+  }
+
   .name {
-    font-size: 80px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 25px;
+  }
+
+  .FirstPhoto,
+  .SecondPhoto {
+    width: 0.7em;
+    height: 0.7em;
+  }
+
+  .FirstPhoto img,
+  .SecondPhoto img {
+    width: 45px;
+    height: 60px;
   }
 }
 
-@media (max-width: 360px) {
-  /* Для самых маленьких экранов, например, iPhone SE */
+/* === iPhone SE (375px) === */
+@media (max-width: 375px) {
+  .title {
+    font-size: 50px;
+  }
+
   .name {
-    font-size: 40px; /* Сильно уменьшаем текст */
+    font-size: 12px;
   }
 
   .hero {
@@ -160,25 +256,41 @@
 
   .FirstPhoto,
   .SecondPhoto {
-    width: 0.8em; /* Еще меньше размеры */
-    height: 0.8em;
+    width: 0.6em;
+    height: 0.6em;
   }
 
   .FirstPhoto img,
   .SecondPhoto img {
-    width: 0.8em;
-    height: 0.8em;
-  }
-
-  .FirstPhoto::before,
-  .SecondPhoto::before {
-    border: 8px solid #007bff; /* Снова уменьшаем толщину */
+    width: 40px;
+    height: 55px;
   }
 }
 
-@media (max-width: 390px) {
+/* === Самые маленькие экраны (320px) — например, старые iPhone SE или Android mini === */
+@media (max-width: 320px) {
+  .title {
+    font-size: 40px;
+  }
 
- 
+  .name {
+    font-size: 10px;
+  }
 
+  .hero {
+    padding: 15px;
+    min-height: 60vh;
+  }
+
+  .FirstPhoto,
+  .SecondPhoto {
+    width: 0.5em;
+    height: 0.5em;
+  }
+
+  .FirstPhoto img,
+  .SecondPhoto img {
+    width: 30px;
+    height: 45px;
+  }
 }
-

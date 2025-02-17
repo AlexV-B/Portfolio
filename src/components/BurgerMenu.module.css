@@ -37,11 +37,15 @@
   width: 45px;
   height: 3px;
   margin: 5px;
-  background-color: #bb8989;
+  background-color: #6d6d6d;
   transition: transform 0.8s ease, opacity 0.8s ease;
   border-radius: 3px;
   cursor: pointer;
 
+}
+
+.bm-icon span:hover {
+  background-color: aliceblue;
 }
 
 .bm-icon.open span:nth-child(1) {
@@ -68,11 +72,11 @@
   outline: none;
   z-index: 500;
   margin: 15px;
+  margin-left: 60px;
   white-space: nowrap; /* Чтобы текст не переносился */
-overflow: visible;
-box-sizing: border-box;
-pointer-events: all;
-
+  overflow: visible;
+  box-sizing: border-box;
+  pointer-events: all;
   opacity: 0;
   transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
@@ -83,8 +87,7 @@ pointer-events: all;
   right: 0;
   width: 100vw;
   height: 100vh;
-  transform: translateX(-420%);
-  transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   /* Увеличиваем длительность анимации с пружинным эффектом */
   pointer-events: all;
   opacity: 1;
@@ -144,5 +147,105 @@ pointer-events: all;
 .bm-item-list:not(.animate) .bm-item {
   opacity: 0;
   transform: translateX(40px);
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+
+
+/* === АДАПТАЦИЯ ПОД РАЗНЫЕ ЭКРАНЫ === */
+
+/* Планшеты (от 768px до 1024px) */
+@media (max-width: 1024px) {
+  .bm-item {
+    font-size: 4rem;
+  }
+
+  .bm-item-list {
+    width: 350px;
+  }
+
+  .bm-icon {
+    top: 20px;
+    right: 15px;
+  }
+
+  .bm-icon span {
+    width: 35px;
+    height: 3px;
+  }
+}
+
+/* Смартфоны (от 480px до 767px) */
+@media (max-width: 767px) {
+  .bm-item {
+    font-size: 3rem;
+    margin: 10px;
+  }
+
+  .bm-item-list {
+    width: 280px;
+  }
+
+  .bm-icon {
+    top: 15px;
+    right: 10px;
+  }
+
+  .bm-icon span {
+    width: 30px;
+    height: 2.5px;
+  }
+
+  .bm-menu-wrap {
+    top: 20px;
+  }
+}
+
+/* Маленькие смартфоны (до 480px) */
+@media (max-width: 480px) {
+  .bm-item {
+    font-size: 2.5rem;
+    margin: 8px;
+  }
+
+  .bm-item-list {
+    width: 250px;
+  }
+
+  .bm-icon {
+    top: 10px;
+    right: 10px;
+  }
+
+  .bm-icon span {
+    width: 28px;
+    height: 2px;
+  }
+
+  .bm-menu-wrap {
+    top: 15px;
+  }
+}
+
+/* Очень маленькие экраны (до 390px) */
+@media (max-width: 390px) {
+  .bm-item {
+    font-size: 2rem;
+    margin: 6px;
+  }
+
+  .bm-item-list {
+    width: 220px;
+  }
+
+  .bm-icon {
+    top: 5px;
+    right: 5px;
+  }
+
+  .bm-icon span {
+    width: 25px;
+    height: 2px;
+  }
 }

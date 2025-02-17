@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
 
   return (
     <section ref={sectionRef} id="home" className={styles.hero}>
-            <h1 className={styles.title}>Varnavin-Braun Alexander</h1>
+            <h1 className={styles.name}>Varnavin-Braun Alexander</h1>
       <div
         className={styles.iam}
         style={{
@@ -53,8 +53,8 @@ const Hero: React.FC = () => {
           transition: "transform 0.8s ease-in-out, opacity 0.8s ease-in-out",
         }}
       >
-        <h2 className={styles.name}>Fr<span className={styles.FirstPhoto}><img src ={FirstAvatar} alt="FirstAvatar"></img></span>ntend Entwicklung</h2>
-        <h2 className={styles.name}>ist was führt uns f<span className={styles.SecondPhoto}><img src ={SecondAvatar} alt="SecondAvatar"></img></span>rt</h2>
+        <h2 className={styles.title}>Fr<span className={styles.FirstPhoto}><img src ={FirstAvatar} alt="FirstAvatar"></img></span>ntend Entwicklung</h2>
+        <h2 className={styles.title}>ist was führt uns f<span className={styles.SecondPhoto}><img src ={SecondAvatar} alt="SecondAvatar"></img></span>rt</h2>
       </div>
       <img
         // src={avatar}

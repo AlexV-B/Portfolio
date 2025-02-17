@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import "@fontsource/plus-jakarta-sans";
+@import "@fontsource/plus-jakarta-sans/700.css";
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
   background-color: #FFFFFF;
   color: #6f7686;
   margin: 0;

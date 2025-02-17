@@ -11,8 +11,8 @@ const Contacts: React.FC = () => {
       transition={{ duration: 0.8 }}
       >
       <div className="container">
-        <h2>Свяжитесь со мной</h2>
-        <p>Вы можете написать мне на почту или связаться через соцсети.</p>
+        <h2>Kontaktieren Sie mich</h2>
+        <p>Sie können mir per E-Mail schreiben oder über soziale Netzwerke Kontakt mit mir aufnehmen</p>
         <div className="contact-links">
           <a href="mailto:vas681@gmail.com" className="contact-link">
             <FaEnvelope /> vas681@gmail.com

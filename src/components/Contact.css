@@ -1,7 +1,9 @@
 .contacts {
+  position: relative;
     padding: 50px 20px;
     background-color: #f8f9fa;
     text-align: center;
+    z-index: 3;
   }
   
   .contacts .container {
@@ -40,5 +42,108 @@
   .contact-link:hover {
     transform: scale(1.1);
     color: #0056b3;
+  }
+  
+
+
+  @media (max-width: 1200px) {
+    .contacts h2 {
+      font-size: 1.8rem;
+    }
+  
+    .contacts p {
+      font-size: 0.95rem;
+    }
+  
+    .contact-link {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .contacts {
+      padding: 40px 15px;
+    }
+  
+    .contacts .container {
+      max-width: 500px;
+    }
+  
+    .contacts h2 {
+      font-size: 1.6rem;
+    }
+  
+    .contacts p {
+      font-size: 0.9rem;
+    }
+  
+    .contact-link {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contacts {
+      padding: 35px 10px;
+    }
+  
+    .contacts .container {
+      max-width: 450px;
+    }
+  
+    .contacts h2 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+  
+    .contacts p {
+      font-size: 0.85rem;
+    }
+  
+    .contact-links {
+      gap: 12px;
+    }
+  
+    .contact-link {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .contacts {
+      padding: 30px 10px;
+    }
+  
+    .contacts .container {
+      max-width: 100%;
+    }
+  
+    .contacts h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+  
+    .contacts p {
+      font-size: 0.8rem;
+    }
+  
+    .contact-link {
+      font-size: 0.85rem;
+      gap: 8px;
+    }
+  }
+  
+  @media (max-width: 390px) {
+    .contacts h2 {
+      font-size: 1rem;
+    }
+  
+    .contacts p {
+      font-size: 0.75rem;
+    }
+  
+    .contact-link {
+      font-size: 0.8rem;
+    }
   }
   

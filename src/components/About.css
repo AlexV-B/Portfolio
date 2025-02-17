@@ -1,24 +1,168 @@
 .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 80px 20px;
-    background: white;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 150vh;
+  background: rgb(237, 237, 237);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* overflow-x: hidden;  */
+  transition: clip-path 0.8s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 2;
+}
+
+
+
+.about-content {
+  margin-bottom: 30px;
+  width: 100vw;
+}
+
+h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #1A202C;
+  margin-top: 50px;
+  padding: 0 50px;
+}
+
+.blocks {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 30px;
+  width: 100%;
+}
+
+/* Анимация появления для первого блока (слева) */
+.FirstBlock {
+  width: 900px;
+  margin-left: 50px;
+  opacity: 0;
+  transform: translateX(-150px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Анимация появления для второго блока (справа) */
+.SecondBlock {
+  grid-row: 2;
+  justify-self: self-end;
+  width: 900px;
+  margin-right: 50px;
+  opacity: 0;
+  transform: translateX(150px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Видимые блоки */
+.FirstBlock.visible,
+.SecondBlock.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Стили блоков */
+.FirstBlock,
+.SecondBlock {
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 28px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  /* border: 1px solid #007bff; */
+  box-shadow: 0 6px 25px #007bff75;
+  background-color: white;
+  color: #1A202C;
+}
+
+
+.mySkills {
+  color: #007bff;
+}
+
+
+
+@media (max-width: 1200px) {
+  .FirstBlock,
+  .SecondBlock {
+    width: 700px;
+    font-size: 24px;
   }
-  
-  .about-content {
-    max-width: 600px;
+
+  h2 {
+    font-size: 36px;
+    padding: 0 30px;
   }
-  
+}
+
+@media (max-width: 992px) {
+  .blocks {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .FirstBlock,
+  .SecondBlock {
+    width: 90%;
+    font-size: 22px;
+    margin: 0 auto;
+  }
+
   h2 {
     font-size: 32px;
-    font-weight: 700;
-    color: #1A202C;
   }
-  
-  p {
+}
+
+@media (max-width: 768px) {
+  .about {
+    height: 100vh;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .FirstBlock,
+  .SecondBlock {
+    width: 95%;
+    font-size: 20px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    height: auto;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .FirstBlock,
+  .SecondBlock {
+    width: 300px;
     font-size: 18px;
-    color: #4A5568;
+    padding: 12px;
   }
-  
+}
+
+@media (max-width: 390px) {
+  h2 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .FirstBlock,
+  .SecondBlock {
+    width: 300px;
+    font-size: 16px;
+    padding: 10px;
+  }
+}

@@ -67,3 +67,20 @@
     }
   }
   
+
+  @media (max-width: 390px) {
+  
+    .skills-container {
+      padding: 10px 0;
+    }
+
+    .skill-card {
+      width: 80px;
+      height: 70px;
+    }
+  
+
+    .icon {
+      font-size: 20px;
+    }
+  }

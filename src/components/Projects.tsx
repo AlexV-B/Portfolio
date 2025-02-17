@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Projects.css"; // Подключаем стили
 import { motion } from "framer-motion";
 
@@ -24,14 +24,30 @@ const projects = [
 ];
 
 const Projects: React.FC = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isCovering, setIsCovering] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+
+      const rect = sectionRef.current.getBoundingClientRect();
+      setIsCovering(rect.top <= 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
+  
   return (
-    <motion.section className="projects" id="projects"
+    <motion.section id="projects" ref={sectionRef} className={`projects ${isCovering ? "covering" : ""}`}
     initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       >
       <div className="container">
-        <h2>Мои проекты</h2>
+        <h2>Meine Projekte</h2>
         <div className="projects-list">
           {projects.map((project) => (
             <div key={project.id} className="project-card">
