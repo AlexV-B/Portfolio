@@ -8,7 +8,6 @@
   width: 100%;
   height: 130vh;
   background-color: black;
-  /* background: url("https://media.istockphoto.com/id/122204403/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B4%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D1%8B%D0%B9-%D0%BA%D0%BE%D0%B4.jpg?s=2048x2048&w=is&k=20&c=qlyDrLlO2oY0rsNtYuXysBZXux8_npKHUdH22S3Ie8A=") center/cover no-repeat fixed; */
   transition: all 0.5s ease-in-out;
   z-index: 5;
 
@@ -18,8 +17,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("https://media.istockphoto.com/id/122204403/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B4%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D1%8B%D0%B9-%D0%BA%D0%BE%D0%B4.jpg?s=2048x2048&w=is&k=20&c=qlyDrLlO2oY0rsNtYuXysBZXux8_npKHUdH22S3Ie8A=") center/cover no-repeat fixed;
-  opacity: 0.6; /* Уровень прозрачности */
+  background: url("https://img.freepik.com/free-photo/programming-background-collage_23-2149901780.jpg?t=st=1740771072~exp=1740774672~hmac=95a3286ec2b7fd2d8799d021d194e713618aed3bf10f870075c405582d280c9b&w=2000") center/cover no-repeat fixed;
+  opacity: 0.4; /* Уровень прозрачности */
   z-index: -1; /* Чтобы фон оставался позади текста */
 }
 
@@ -29,8 +28,8 @@
   background: rgb(0, 0, 0); /* Затемняем фон */
   pointer-events: none;
   transition: mask-image 0.2s ease-out, -webkit-mask-image 0.2s ease-out;
-  mask-image: radial-gradient(circle 80px at var(--x) var(--y), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 1) 100%);
-  -webkit-mask-image: radial-gradient(circle 120px at var(--x) var(--y), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 1) 100%);
+  mask-image: radial-gradient(circle 150px at var(--x) var(--y), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 1) 110%);
+  -webkit-mask-image: radial-gradient(circle 150px at var(--x) var(--y), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 1) 110%);
   z-index: 6;
 }
 
@@ -90,8 +89,8 @@
   display: block;
   padding: 20px;
   width: 50%;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 70px;
+  margin-right: 70px;
   text-align: left;
   transition: transform 0.3s ease;
   border-top: 1px solid rgb(255, 255, 255);
