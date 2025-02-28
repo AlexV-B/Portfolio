@@ -2,13 +2,16 @@
   position: sticky;
   top: 0;
   width: 100vw;
-  height: 150vh;
-  background: rgb(237, 237, 237);
-  display: flex;
+  height: 180vh;
+  background-image: url("https://img.freepik.com/free-vector/minimal-background-with-grey-flowing-lines-design_1048-20060.jpg?t=st=1740691770~exp=1740695370~hmac=bd044a92ebed1fc8fee1558270ea7dcb9602be51cb7dd8137fa9891dcfc340f7&w=2000");
+  background-size: cover; /* Растягивает изображение на всю область */
+  background-position: center; /* Центрирует изображение */
+background-repeat: no-repeat; /* Отключает повторение */
+display: flex;
   align-items: center;
   flex-direction: column;
   /* justify-content: center; */
-  /* overflow-x: hidden;  */
+  overflow-x: hidden; 
   transition: clip-path 0.8s ease-in-out, opacity 0.5s ease-in-out;
   z-index: 2;
 }

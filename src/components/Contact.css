@@ -5,15 +5,17 @@
     text-align: center;
     z-index: 3;
   }
-  
+
   .contacts .container {
     max-width: 600px;
     margin: 0 auto;
   }
   
   .contacts h2 {
+    color: #000000;
     font-size: 2rem;
-    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 45px;
   }
   
   .contacts p {

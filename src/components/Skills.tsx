@@ -9,7 +9,6 @@ import {
   const Skills = () => {
     return (
       <section id="skills" className="skills-section">
-
       <div className="skills-container">
         <div className="skills-track">
           <SkillCards />

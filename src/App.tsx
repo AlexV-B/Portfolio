@@ -8,20 +8,20 @@ import Contact from "./components/Contact";
 import Skills from "./components/Skills";
 import FlyingDrops from './components/FlyingDrops';
 import BurgerMenu from './components/BurgerMenu';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router} from 'react-router-dom';
 
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <BurgerMenu />
       <Hero />
-      <FlyingDrops />
       <Skills />
+      <FlyingDrops />
       <About />
       <Projects />
-      <Contact /> 
-    </BrowserRouter>
+      <Contact />
+    </Router>
   )
 }
 
