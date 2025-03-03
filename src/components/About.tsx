@@ -5,7 +5,7 @@ const About: React.FC = () => {
   const firstBlockRef = useRef<HTMLDivElement | null>(null);
   const secondBlockRef = useRef<HTMLDivElement | null>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [isFixed, setIsFixed] = useState(false);
+  const [isFixed] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [hasClicked, setHasClicked] = useState(false); // ✅ Новое состояние
   const [isShaking, setIsShaking] = useState(false);

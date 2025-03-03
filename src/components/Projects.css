@@ -255,11 +255,6 @@
 
 @media (max-width: 480px) {
 
-  .projects {
-    /* height: 100vh; */
-
-  }
-
   .projects h2 {
     font-size: 25px;
     margin-top: 0px;
