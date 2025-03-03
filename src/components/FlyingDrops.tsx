@@ -79,7 +79,7 @@ const FlyingDrops: React.FC = () => {
           const dy = mouse.y - this.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 200) {
+          if (distance < 150) {
             const angle = Math.atan2(dy, dx);
             const force = Math.max(0,1, (distance - 100) / 100);
             const forceX = Math.cos(angle) * force * 5;

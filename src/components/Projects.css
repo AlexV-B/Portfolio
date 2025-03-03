@@ -17,15 +17,18 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("https://img.freepik.com/free-photo/programming-background-collage_23-2149901780.jpg?t=st=1740771072~exp=1740774672~hmac=95a3286ec2b7fd2d8799d021d194e713618aed3bf10f870075c405582d280c9b&w=2000") center/cover no-repeat fixed;
-  opacity: 0.4; /* Уровень прозрачности */
-  z-index: -1; /* Чтобы фон оставался позади текста */
+  background: url("https://images.unsplash.com/photo-1488229297570-58520851e868?q=80&w=3269&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover no-repeat fixed;
+  opacity: 0.4;
+  /* Уровень прозрачности */
+  z-index: -1;
+  /* Чтобы фон оставался позади текста */
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgb(0, 0, 0); /* Затемняем фон */
+  background: rgb(0, 0, 0);
+  /* Затемняем фон */
   pointer-events: none;
   transition: mask-image 0.2s ease-out, -webkit-mask-image 0.2s ease-out;
   mask-image: radial-gradient(circle 150px at var(--x) var(--y), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 1) 110%);
@@ -82,7 +85,7 @@
   /* justify-content: flex-start; */
   gap: 30px;
   margin: 0 auto;
-  
+
 }
 
 .project-card {
@@ -100,7 +103,8 @@
 }
 
 .project-card:nth-child(even) {
-margin-left: auto;  /* Смещаем вправо */
+  margin-left: auto;
+  /* Смещаем вправо */
   text-align: right;
   /* Выравниваем текст по правому краю */
 }
@@ -148,6 +152,10 @@ margin-left: auto;  /* Смещаем вправо */
     height: 110vh;
   }
 
+  .wave-top {
+    top: -65px;
+  }
+
   .projects h2 {
     font-size: 1.8rem;
   }
@@ -162,6 +170,11 @@ margin-left: auto;  /* Смещаем вправо */
   .projects {
     height: auto;
     padding: 50px 20px;
+
+  }
+
+  .wave-top {
+    top: -60px;
   }
 
   .projects h2 {
@@ -196,6 +209,10 @@ margin-left: auto;  /* Смещаем вправо */
     margin-bottom: 15px;
   }
 
+  .wave-top {
+    top: -50px;
+  }
+
   .projects-list {
     flex-direction: column;
     align-items: center;
@@ -218,6 +235,10 @@ margin-left: auto;  /* Смещаем вправо */
     font-size: 1.2rem;
   }
 
+  .wave-top {
+    top: -35px;
+  }
+
   .project-card {
     width: 95%;
     padding: 12px;
@@ -232,6 +253,23 @@ margin-left: auto;  /* Смещаем вправо */
   }
 }
 
+@media (max-width: 480px) {
+
+  .projects {
+    /* height: 100vh; */
+
+  }
+
+  .projects h2 {
+    font-size: 25px;
+    margin-top: 0px;
+  }
+
+  .wave-top {
+    top: -28px;
+  }
+}
+
 @media (max-width: 390px) {
   .projects h2 {
     font-size: 1rem;
@@ -241,5 +279,9 @@ margin-left: auto;  /* Смещаем вправо */
   .project-card {
     font-size: 0.8rem;
     padding: 10px;
+  }
+
+  .wave-top {
+    top: -25px;
   }
 }

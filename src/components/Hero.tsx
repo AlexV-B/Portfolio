@@ -57,8 +57,6 @@ const Hero: React.FC = () => {
         <h2 className={styles.title}>ist was führt uns f<span className={styles.SecondPhoto}><img src ={SecondAvatar} alt="SecondAvatar"></img></span>rt</h2>
       </div>
       <img
-        // src={avatar}
-        // alt="My photo"
         className={styles.avatar}
         style={{
           transform:

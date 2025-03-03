@@ -23,12 +23,12 @@ display: flex;
   width: 100vw;
 }
 
-h2 {
+.about-content h2 {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 42px;
   font-weight: 700;
   color: #1A202C;
-  margin-top: 50px;
+  margin-top: 35px;
   padding: 0 50px;
 }
 
@@ -36,54 +36,127 @@ h2 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  gap: 30px;
+  gap: 1px;
   width: 100%;
+}
+
+/* Стили кнопки */
+.reveal-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  /* margin-right: 350px; */
+  width: 150px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: 1px solid rgba(0, 0, 0, 0.522);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #4A90E2, #007AFF);
+}
+
+.reveal-button:hover {
+  /* background-color: #0056b3; */
+  animation: none;
+}
+.reveal-button.shake {
+  animation: shake 0.3s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
 }
 
 /* Анимация появления для первого блока (слева) */
 .FirstBlock {
-  width: 900px;
   margin-left: 50px;
   opacity: 0;
   transform: translateX(-150px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Анимация появления для второго блока (справа) */
+/* Блок перед падением */
 .SecondBlock {
+  position: relative;
   grid-row: 2;
   justify-self: self-end;
-  width: 900px;
   margin-right: 50px;
+  background-color: rgba(0, 0, 0, 0.799);
+  color: #ffffff;
+  /* Исходное состояние — скрытый блок */
   opacity: 0;
+  visibility: hidden;
+  transform: translateY(-200px);
   transform: translateX(150px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
+
+/* Анимация падения и отскока */
+@keyframes fallAndBounce {
+  0% {
+    transform: translateY(-200px); /* Исходное положение (вне экрана) */
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0); /* Достигает пола */
+    opacity: 1;
+  }
+  65% {
+    transform: translateY(-30px); /* Подскакивает вверх */
+  }
+  80% {
+    transform: translateY(0); /* Опять вниз */
+  }
+  90% {
+    transform: translateY(-8px); /* Маленький финальный отскок */
+  }
+  100% {
+    transform: translateY(0); /* Останавливается */
+  }
+}
+
+/* Запуск анимации при нажатии кнопки */
+.SecondBlock.falling {
+  visibility: visible;
+  opacity: 1;
+  animation: fallAndBounce 1s cubic-bezier(0.3, 1.3, 0.3, 1) forwards;
+}
+
+
 /* Видимые блоки */
-.FirstBlock.visible,
-.SecondBlock.visible {
+.SecondBlock.visible,
+.FirstBlock.visible{ 
   opacity: 1;
   transform: translateX(0);
 }
 
 /* Стили блоков */
-.FirstBlock,
-.SecondBlock {
+.SecondBlock,
+.FirstBlock
+{
+  width: 50vw;
   padding: 20px;
   border-radius: 20px;
-  font-size: 28px;
+  font-size: 25px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 500;
-  /* border: 1px solid #007bff; */
-  box-shadow: 0 6px 25px #007bff75;
-  background-color: white;
-  color: #1A202C;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  line-height: 1.6;
+  box-sizing: border-box;
 }
 
 
 .mySkills {
   color: #007bff;
+  font-weight: 700;
 }
 
 
@@ -155,6 +228,51 @@ h2 {
     padding: 12px;
   }
 }
+
+@media (max-width: 480px) {
+  .about {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем блоки по горизонтали */
+    justify-content: center; /* Центрируем блоки по вертикали */
+  }
+
+  .blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .about-content h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0px;
+    font-size: 25px;
+  }
+
+  .FirstBlock,
+  .SecondBlock {
+    text-align: center;
+    width: 350px;
+    height: 250px;
+    font-size: 18px;   
+  }
+  .SecondBlock {
+  font-size: 22px;
+  }
+
+  .reveal-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
 
 @media (max-width: 390px) {
   h2 {

@@ -85,3 +85,15 @@
       font-size: 20px;
     }
   }
+
+  @media (max-width: 480px) {
+    .skill-card {
+      width: 80px;
+      height: 70px;
+    }
+
+    .icon {
+      font-size: 20px;
+    }
+
+  }
