@@ -1,9 +1,10 @@
 .contacts {
-  position: relative;
+  position: absolute;
+  width: 100vw;
     padding: 50px 20px;
     background-color: #f8f9fa;
     text-align: center;
-    z-index: 3;
+    z-index: 20;
   }
 
   .contacts .container {

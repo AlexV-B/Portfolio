@@ -6,11 +6,10 @@
   background-image: url("https://img.freepik.com/free-vector/minimal-background-with-grey-flowing-lines-design_1048-20060.jpg?t=st=1740691770~exp=1740695370~hmac=bd044a92ebed1fc8fee1558270ea7dcb9602be51cb7dd8137fa9891dcfc340f7&w=2000");
   background-size: cover; /* Растягивает изображение на всю область */
   background-position: center; /* Центрирует изображение */
-background-repeat: no-repeat; /* Отключает повторение */
-display: flex;
+  background-repeat: no-repeat; /* Отключает повторение */
+  display: flex;
   align-items: center;
   flex-direction: column;
-  /* justify-content: center; */
   overflow-x: hidden; 
   transition: clip-path 0.8s ease-in-out, opacity 0.5s ease-in-out;
   z-index: 2;
@@ -46,14 +45,13 @@ display: flex;
   justify-content: center;
   align-items: center;
   justify-self: center;
-  /* margin-right: 350px; */
   width: 150px;
   padding: 10px;
   font-size: 20px;
   font-weight: bold;
   color: white;
   background-color: #007bff;
-  border: 1px solid rgba(0, 0, 0, 0.522);
+  border: none;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
   border-radius: 30px;
@@ -61,7 +59,6 @@ display: flex;
 }
 
 .reveal-button:hover {
-  /* background-color: #0056b3; */
   animation: none;
 }
 .reveal-button.shake {
@@ -272,10 +269,39 @@ display: flex;
   }
 }
 
+@media (max-width: 812px) and (orientation: landscape) {
+  .reveal-button {
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+  }
 
+  .blocks {
+    gap: 30px;
+  }
+
+  .about-content h2 {
+    margin-top: 25px;
+    font-size: 30px;
+  }
+
+  .FirstBlock,
+  .SecondBlock {
+    text-align: center;
+    width: 550px;
+    height: 100px;
+    padding: 10px;
+    font-size: 13px;   
+  }
+  .SecondBlock {
+  font-size: 15px;
+  }
+}
 
 @media (max-width: 390px) {
-  h2 {
+  .about-content h2 {
     font-size: 20px;
     margin-top: 20px;
   }

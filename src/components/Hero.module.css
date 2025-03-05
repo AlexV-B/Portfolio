@@ -1,15 +1,15 @@
 .hero {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  padding: 50px;
+  padding: 3rem;
   background-color: #000000;
   min-height: 100vh;
   overflow: hidden;
-  position: relative;
   cursor: default;
-
+  padding-bottom: 0;
   background-image: repeating-linear-gradient(0deg,
       rgba(0, 0, 0, 0) 0px,
       rgba(0, 0, 0, 0) 15px,
@@ -38,7 +38,7 @@
 
 .title {
   color: #007bff;
-  font-size: 130px;
+  font-size: 8rem;
   overflow-wrap: break-word;
   margin: 0;
   transition: transform 0.9s ease-in-out, opacity 0.9s ease-in-out;
@@ -47,13 +47,12 @@
 .FirstPhoto {
   display: inline-block;
   position: relative;
-  margin: 8px;
+  margin: 0.06em;
   width: 0.6em;
   /* Размер круга, приближенный к букве "о" */
   height: 0.6em;
   /* Высота равна шрифту */
   border-radius: 50%;
-  /* Круглая форма */
   background-color: #007bff;
   /* Цвет круга такой же, как у текста */
   overflow: visible;
@@ -68,15 +67,13 @@
   left: 50%;
   transform: translateX(-50%) translateY(-23%);
   /* Сдвигаем вверх на 30% */
-  width: 70px;
-  /* Увеличиваем фотографию для выхода за пределы */
-  height: 90px;
+  width: 100%;
+  max-width: 4rem;
+  height: 6rem;
   object-fit: cover;
-  /* Сохраняем пропорции фотографии */
   transition: transform 0.3s ease;
   /* Анимация на hover */
   border-radius: 50%;
-  /* Круглая форма */
 }
 
 .FirstPhoto:hover img {
@@ -90,7 +87,7 @@
   /* Маска для нижней части */
   position: absolute;
   inset: 0;
-  border: 13px solid #007bff;
+  border: 0.8rem solid #007bff;
   /* Цвет обводки совпадает с текстом */
   border-radius: 50%;
   /* Соответствие форме круга */
@@ -104,7 +101,7 @@
 .SecondPhoto {
   display: inline-block;
   position: relative;
-  margin: 8px;
+  margin: 0.06em;
   width: 0.6em;
   /* Размер круга, приближенный к букве "о" */
   height: 0.6em;
@@ -125,15 +122,12 @@
   left: 50%;
   transform: translateX(-46%) translateY(-22%);
   /* Сдвигаем вверх на 30% */
-  width: 58px;
-  /* Увеличиваем фотографию для выхода за пределы */
-  height: 90px;
-  object-fit: cover;
-  /* Сохраняем пропорции фотографии */
-  transition: transform 0.3s ease;
-  /* Анимация на hover */
-  border-radius: 40%;
-  /* Круглая форма */
+  width: 100%;
+  max-width: 4rem;
+  height: 6rem;
+  object-fit: cover; /* Сохраняем пропорции фотографии */
+  transition: transform 0.3s ease; /* Анимация на hover */
+  border-radius: 50%;
 }
 
 .SecondPhoto:hover img {
@@ -147,7 +141,7 @@
   /* Маска для нижней части */
   position: absolute;
   inset: 0;
-  border: 13px solid #007bff;
+  border: 0.8rem solid #007bff;
   /* Цвет обводки совпадает с текстом */
   border-radius: 50%;
   /* Соответствие форме круга */
@@ -191,16 +185,15 @@
   .hero {
     height: 100vh;
     width: 100vw;
-
   }
 
   .name {
-    font-size: 14px;
+    font-size: 1em;
     margin-bottom: -90px;
   }
 
   .title {
-    font-size: 53px;
+    font-size: 3rem;
     line-height: 1.5;
   }
   
@@ -213,20 +206,54 @@
   
   .FirstPhoto img,
   .SecondPhoto img {
-    width: 30px;
-    height: 45px;
+    width: 0.7em;
+    height: 0.8em;
   }
   
   .FirstPhoto::before {
-    border: 7px solid #007bff;
-
+    border: 0.4rem solid #007bff;
   }
   
   .SecondPhoto::before {
-    border: 7px solid #007bff;
-
+    border: 0.4rem solid #007bff;
   }
 }
+
+@media (max-width: 812px) and (orientation: landscape) {
+  .hero{
+    height: 100vh;
+  }
+  .iam h2 {
+    font-size: 3.5rem;
+    line-height: 1.6;
+  }
+
+  .FirstPhoto,
+  .SecondPhoto {
+    width: 0.7em;
+    height: 0.7em;
+  }
+  
+  .FirstPhoto img
+  {
+    width: 0.7em;
+    height: 0.8em;
+  }
+
+  .SecondPhoto img {
+    width: 0.6em;
+    height: 0.8em;
+  }
+
+  .FirstPhoto::before {
+    border: 0.4rem solid #007bff;
+  }
+  
+  .SecondPhoto::before {
+    border: 0.4rem solid #007bff;
+  }
+}
+
 
 /* === iPhone 12/13/14/15 (390px) === */
 @media (max-width: 390px) {

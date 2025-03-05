@@ -17,11 +17,9 @@
   width: 100vw;
   transition: transform 0.8s ease-in-out;
   pointer-events: all;
-  border: none !important;
+  /* border: none !important; */
 
 }
-
-
 
 .bm-icon {
   position: fixed;
@@ -238,6 +236,20 @@
     margin-top: 50px;
     transform: translateX(-100px);
     line-height: 2;
+  }
+}
+
+@media (max-width: 812px) and (orientation: landscape) {
+
+  .bm-menu-wrap.open {
+    margin-top: 0px;
+    transform: translateX(-500px);
+    line-height: 2;
+  }
+  .bm-item {
+    margin: 0px;
+    margin-left: 50px;
+    font-size: 2rem;
   }
 }
 

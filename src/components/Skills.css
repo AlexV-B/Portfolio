@@ -97,3 +97,13 @@
     }
 
   }
+
+  @media (max-width: 812px) and (orientation: landscape) {
+    .skill-card {
+      width: 80px;
+      height: 70px;
+    }
+    .icon {
+      font-size: 20px;
+    }
+  }
