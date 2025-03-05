@@ -8,7 +8,6 @@ class Particle {
   size: number;
   speedX: number;
   speedY: number;
-  friction: number = 0.98; // Добавим трение для замедления движения
 
   constructor(x: number, y: number, size: number, speedX: number, speedY: number) {
     this.x = x;
@@ -29,14 +28,11 @@ class Particle {
     this.x += this.speedX;
     this.y += this.speedY;
 
-    // Перезапускаем каплю, если она уходит за верхнюю границу
     if (this.y + this.size < 0) {
       this.y = canvas.height + this.size;
       this.x = Math.random() * canvas.width;
-      this.speedX = Math.random() * 2 - 1;
     }
 
-    // Реакция на мышь
     if (mouse.x !== null && mouse.y !== null) {
       const dx = mouse.x - this.x;
       const dy = mouse.y - this.y;
@@ -44,10 +40,8 @@ class Particle {
 
       if (distance < 150) {
         const angle = Math.atan2(dy, dx);
-        const force = Math.max(0, 1, (distance - 100) / 100);
-        const forceX = Math.cos(angle) * force * 5;
-        const forceY = Math.sin(angle) * force * 5;
-
+        const forceX = Math.cos(angle) * 2;
+        const forceY = Math.sin(angle) * 2;
         this.x -= forceX;
         this.y -= forceY;
       }
@@ -60,28 +54,27 @@ const FlyingDrops: React.FC = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return; // Проверяем, что canvas существует
+    if (!canvas) return; // Проверяем существование canvas
 
     const ctx = canvas.getContext("2d");
-    if (!ctx) return; // Проверяем, что контекст существует
+    if (!ctx) return; // Проверяем существование контекста
 
+    // Функция изменения размера canvas
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
 
-    resizeCanvas(); // Инициализация размера канваса
+    resizeCanvas(); // Устанавливаем размер при монтировании
 
     const particles: Particle[] = [];
     const mouse = { x: null as number | null, y: null as number | null };
 
-    // Обновляем координаты мыши
     const handleMouseMove = (event: MouseEvent) => {
       mouse.x = event.x;
       mouse.y = event.y;
     };
 
-    // Сбрасываем координаты мыши
     const handleMouseOut = () => {
       mouse.x = null;
       mouse.y = null;
@@ -90,7 +83,6 @@ const FlyingDrops: React.FC = () => {
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseout", handleMouseOut);
 
-    // Инициализация частиц
     const initParticles = () => {
       particles.length = 0;
       for (let i = 0; i < 50; i++) {
@@ -99,14 +91,11 @@ const FlyingDrops: React.FC = () => {
         const size = Math.random() * 2 + 1;
         const speedX = Math.random() * 1 - 1;
         const speedY = Math.random() * 0 - 1;
-
         particles.push(new Particle(x, y, size, speedX, speedY));
       }
     };
 
-    // Анимация частиц
     const animateParticles = () => {
-      if (!ctx || !canvas) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       particles.forEach((particle) => {
         particle.update(canvas, mouse);
@@ -115,7 +104,6 @@ const FlyingDrops: React.FC = () => {
       requestAnimationFrame(animateParticles);
     };
 
-    // Изменение размера окна
     const handleResize = () => {
       resizeCanvas();
       initParticles();
@@ -123,7 +111,6 @@ const FlyingDrops: React.FC = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Запуск
     initParticles();
     animateParticles();
 

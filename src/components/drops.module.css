@@ -1,11 +1,12 @@
 canvas {
-    position: absolute;
+    position: fixed;
     display: block;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    pointer-events: none; /* Убедитесь, что canvas не блокирует мышь */
+    pointer-events: none;
+    mix-blend-mode: screen;
     z-index: 2;
   }
   

@@ -14,9 +14,9 @@ import { HashRouter as Router} from 'react-router-dom';
 function App() {
   return (
     <Router>
+      <FlyingDrops />
       <BurgerMenu />
       <Hero />
-      <FlyingDrops />
       <Skills />
       <About />
       <Projects />
