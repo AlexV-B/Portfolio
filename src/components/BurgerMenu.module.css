@@ -176,29 +176,39 @@
   }
 }
 
-/* Смартфоны (от 480px до 767px) */
-@media (max-width: 767px) {
+/* Смартфоны (от 480px до 768px) */
+@media (max-width: 768px) {
+
+  .bm-menu {
+    width: 100vw; /* Уменьшаем ширину, чтобы влезало */
+  }
+
   .bm-item {
-    font-size: 3rem;
-    margin: 10px;
+    font-size: 3.5rem;
+    margin: 8px;
   }
 
   .bm-item-list {
-    width: 280px;
+    width: 100%;
   }
 
   .bm-icon {
-    top: 15px;
-    right: 10px;
+    top: 40px;
+    right: 20px;
   }
 
   .bm-icon span {
-    width: 30px;
-    height: 2.5px;
+    width: 28px;
+    height: 2px;
   }
 
   .bm-menu-wrap {
-    top: 20px;
+    top: 15px;
+  }
+  .bm-menu-wrap.open {
+    margin-top: 50px;
+    transform: translateX(-25em);
+    line-height: 2;
   }
 }
 

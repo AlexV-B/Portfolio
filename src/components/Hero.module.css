@@ -165,35 +165,19 @@
 
 /* === Маленькие планшеты и крупные телефоны (iPhone 14 Pro Max, XR, 11) === */
 @media (max-width: 834px) {
-  .title {
-    font-size: 85px;
-  }
-
-  .name {
-    font-size: 16px;
-  }
-
-  .hero {
-    padding: 40px;
-    min-height: 75vh;
-  }
-}
-
-/* === iPhone XR, 11, 14 Pro Max (414px — 430px) === */
-@media (max-width: 430px) {
-
   .hero {
     height: 100vh;
     width: 100vw;
   }
 
   .name {
-    font-size: 1em;
+    font-size: 1.3em;
     margin-bottom: -90px;
   }
 
   .title {
-    font-size: 3rem;
+    text-align: center;
+    font-size: 6rem;
     line-height: 1.5;
   }
   
@@ -219,7 +203,47 @@
   }
 }
 
-@media (max-width: 812px) and (orientation: landscape) {
+/* === iPhone XR, 11, 14 Pro Max (414px — 430px) === */
+@media (max-width: 430px) {
+
+  .hero {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .name {
+    font-size: 1em;
+    margin-bottom: -90px;
+  }
+
+  .title {
+    font-size: 2.7rem;
+    line-height: 2;
+  }
+  
+  
+  .FirstPhoto,
+  .SecondPhoto {
+    width: 0.7em;
+    height: 0.7em;
+  }
+  
+  .FirstPhoto img,
+  .SecondPhoto img {
+    width: 0.7em;
+    height: 0.8em;
+  }
+  
+  .FirstPhoto::before {
+    border: 0.4rem solid #007bff;
+  }
+  
+  .SecondPhoto::before {
+    border: 0.4rem solid #007bff;
+  }
+}
+
+@media (max-width: 896px) and (orientation: landscape) {
   .hero{
     height: 100vh;
   }
@@ -255,19 +279,15 @@
 }
 
 
-/* === iPhone 12/13/14/15 (390px) === */
-@media (max-width: 390px) {
+/* === iPhone 12/13/14/15/16 (393px) === */
+@media (max-width: 393px) {
   .title {
-    font-size: 60px;
+    font-size: 2.6rem;
+    line-height: 1.5;
   }
 
   .name {
-    font-size: 13px;
-  }
-
-  .hero {
-    padding: 25px;
-    width: 100vw;
+    font-size: 1em;
   }
 
   .FirstPhoto,
@@ -275,11 +295,19 @@
     width: 0.7em;
     height: 0.7em;
   }
-
+  
   .FirstPhoto img,
   .SecondPhoto img {
-    width: 45px;
-    height: 60px;
+    width: 0.7em;
+    height: 0.8em;
+  }
+  
+  .FirstPhoto::before {
+    border: 0.3rem solid #007bff;
+  }
+  
+  .SecondPhoto::before {
+    border: 0.3rem solid #007bff;
   }
 }
 

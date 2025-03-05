@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 const projects = [
   {
     id: 1,
-    title: "Film-Case",
-    description: "Простой сайт с адаптивным дизайном.",
+    title: "MovieRealm",
+    description: "Ihre Filmwelt mit anpassungsfähigem Design.",
     link: "https://alexv-b.github.io/my-first-ts/",
   },
   {
     id: 2,
-    title: "React-приложение",
-    description: "SPA-приложение с использованием React и TypeScript.",
+    title: "React-App",
+    description: "SPA-App с использованием React и TypeScript.",
     link: "https://yourusername.github.io/project2/",
   },
   {
