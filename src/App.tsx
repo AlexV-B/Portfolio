@@ -16,8 +16,8 @@ function App() {
     <Router>
       <BurgerMenu />
       <Hero />
-      <Skills />
       <FlyingDrops />
+      <Skills />
       <About />
       <Projects />
       <Contact />
