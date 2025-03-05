@@ -121,6 +121,27 @@ const FlyingDrops: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (canvasRef.current) {
+      const canvas = canvasRef.current;
+      canvas.style.position = "absolute";
+      canvas.style.top = "0";
+      canvas.style.left = "0";
+      canvas.style.width = "100vw";
+      canvas.style.height = "100vh";
+      canvas.style.zIndex = "9999"; // Максимальный приоритет
+      canvas.style.pointerEvents = "none"; // Чтобы не мешал кликам
+    }
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (canvasRef.current) {
+        canvasRef.current.style.zIndex = "9999";
+      }
+    }, 1000); // 1 секунда задержки
+  }, []);
+  
   return <canvas ref={canvasRef} />;
 };
 

@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import FirstAvatar from "../assets/ich.png";
 import SecondAvatar from "../assets/ich22.png";
 import styles from "./Hero.module.css";
-import FlyingDrops from "./FlyingDrops";
 
 const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -42,7 +41,6 @@ const Hero: React.FC = () => {
 
   return (
     <section ref={sectionRef} id="home" className={styles.hero}>
-      <FlyingDrops /> 
             <h1 className={styles.name}>Varnavin-Braun Alexander</h1>
       <div
         className={styles.iam}
