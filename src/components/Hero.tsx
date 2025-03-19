@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
         style={{
           transform: `translateX(${Math.min(scrollOffset, 200)}px)`, // Плавный уход влево
           opacity: isVisible ? Math.max(1 - scrollOffset / 200, 0) : 0, // Плавное исчезновение
-          transition: "transform 0.2s linear, opacity 0.2s linear",
+          transition: "transform 0.3s linear, opacity 0.2s linear",
         }}
       >
         <h2 className={styles.title}>
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
         style={{
           transform: `translateX(-${Math.min(scrollOffset, 200)}px)`, // Плавное движение вправо
           opacity: isVisible ? Math.max(1 - scrollOffset / 200, 0) : 0,
-          transition: "transform 0.2s linear, opacity 0.2s linear",
+          transition: "transform 0.3s linear, opacity 0.2s linear",
         }}
       />
     </section>

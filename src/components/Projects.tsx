@@ -7,13 +7,13 @@ const projects = [
     id: 1,
     title: "MovieRealm",
     description: "Ihre Filmwelt mit anpassungsfähigem Design.",
-    link: "https://alexv-b.github.io/my-first-ts/",
+    link: "https://alexv-b.github.io/movieRealm/",
   },
   {
     id: 2,
     title: "React-App",
     description: "SPA-App с использованием React и TypeScript.",
-    link: "https://yourusername.github.io/project2/",
+    link: "https://alexv-b.github.io/my-first-ts/",
   },
   {
     id: 3,
