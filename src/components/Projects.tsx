@@ -12,14 +12,14 @@ const projects = [
   {
     id: 2,
     title: "React-App",
-    description: "SPA-App с использованием React и TypeScript.",
-    link: "https://alexv-b.github.io/my-first-ts/",
+    description: "Final project on React, TypeScript.",
+    link: "https://platform-qxs32.ondigitalocean.app/",
   },
   {
     id: 3,
     title: "Weather API",
     description: "Работа с внешним API и отображение данных.",
-    link: "https://yourusername.github.io/project3/",
+    link: "https://alexv-b.github.io/my-first-ts/",
   },
 ];
 
