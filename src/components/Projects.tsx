@@ -18,8 +18,8 @@ const projects = [
   {
     id: 3,
     title: "Weather API",
-    description: "Работа с внешним API и отображение данных.",
-    link: "https://alexv-b.github.io/my-first-ts/",
+    description: "in der Entwicklung",
+    link: "",
   },
 ];
 
